@@ -90,19 +90,21 @@ MOTION_OFF = "@media (prefers-reduced-motion: reduce){.flow,.pulse{animation:non
 
 def hero(theme):
     t = THEMES[theme]
-    W, H = 1000, 420
+    W, H = 1000, 452
     name = "Carlos Navarro"
-    line = "I build companies and the technology behind them."
+    tagline = ("Shaping the world by building companies", "and the technology behind them.")
     fits(name, "serif", 100, 640, -1)
-    fits(line, "sans-500", 27, 760)
+    for part in tagline:
+        fits(part, "sans-500", 31, 888)
 
     body = [panel(W, H, t), monogram(56, 52, t)]
     body.append(text(944, 82, "FOUNDER · BUILDER · CEO", "mono", 13, t["muted"], anchor="end", spacing=2.6))
     body.append(text(52, 232, name, "serif", 100, t["text"], spacing=-1))
-    body.append(text(56, 284, line, "sans", 27, t["text2"], weight=500))
+    body.append(text(56, 284, tagline[0], "sans", 31, t["text"], weight=500))
+    body.append(text(56, 322, tagline[1], "sans", 31, t["text"], weight=500))
 
     # Ventures, as chips with each company's own mark.
-    x, y, h = 56, 326, 46
+    x, y, h = 56, 358, 46
     for kind, label, role in (("vitalink", "Vitalink", "Co-founder, CEO & CTO"), ("brida", "Brida", "Founder & CEO")):
         nw = measure(label, "sans-600", 19)
         rw = measure(role, "sans-400", 19)
@@ -162,7 +164,7 @@ def hero(theme):
     return svg(
         W, H,
         "Carlos Navarro",
-        "Founder, builder, CEO. I build companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
+        "Founder, builder, CEO. Shaping the world by building companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
         css, "".join(body),
     )
 
