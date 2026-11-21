@@ -67,6 +67,10 @@ Most of what I build lives in private company repositories. This is the public p
 - [**AI Software Bootstrap**](https://github.com/0xnavarro/ai-software-bootstrap). How I run agent-assisted engineering, as a template: issues, specs, plans, worktrees, CI gates and review.
 - [**create-qa-ops**](https://github.com/0xnavarro/qa-ops) · `npm`. `npx create-qa-ops` scaffolds findings, audits, QA sessions and merge gates that agents can read and run.
 
+**Open-source contributions**
+
+- [**withastro/flue #69**](https://github.com/withastro/flue/pull/69) · `merged`. Added a reasoning-effort option for prompts, skills and tasks to the SDK of Flue, the sandbox agent framework from the Astro team.
+
 **Earlier applied AI**
 
 - [**ADSA**](https://github.com/AteneaLabs/adsa) · `2024`. Autonomous data-science agents: o1 writes the ML code, Claude 3.5 Sonnet debugs it, a coordinator runs the loop. Placed 71st of 2,461 active participants on Kaggle's Spaceship Titanic.
