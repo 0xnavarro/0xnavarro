@@ -22,14 +22,23 @@ I've built technology since school: a first job in connected hardware while stil
 
 **Co-founder, CEO & CTO, since 2025.** Healthcare isn't short of doctors; it's fragmented. Vitalink connects every person, and their own health agent, with doctors, hospitals and providers, on one identity, one verified credential and one record. The mission is to give every person an agent that works for their health. We start in Mexico, inside the doctor's office.
 
-| Status | Product | What it does |
-|:--|:--|:--|
-| <img src="assets/badges/status-live.svg" height="22" alt="Live"> | <img src="assets/icons/record.svg" width="20" alt=""> [**Expediente Vitalink**](https://expediente.vitalink.lat/) | The doctor's whole practice in one record. An agent runs the schedule, confirms visits and follows up; a consult assistant drafts the note for the doctor to review and sign. The model never receives the patient's name or contact details, and the audio is deleted once transcribed. |
-| <img src="assets/badges/status-live.svg" height="22" alt="Live"> | <img src="assets/icons/credential.svg" width="20" alt=""> [**Vitalink credential**](https://expediente.vitalink.lat/credencializacion) | Verifies a doctor's professional licence, identity and documents, at no cost on any plan. |
-| <img src="assets/badges/status-live.svg" height="22" alt="Live"> | <img src="assets/icons/pay.svg" width="20" alt=""> [**Vitalink Pay**](https://pay.vitalink.chat/) | Credentialed doctors charge in cash, in monthly instalments or split across family members. |
-| <img src="assets/badges/status-beta.svg" height="22" alt="Beta"> | <img src="assets/icons/chat.svg" width="20" alt=""> [**Vitalink Chat**](https://www.vitalink.chat/) | Each person's own health agent. |
-| <img src="assets/badges/status-invitation.svg" height="22" alt="By invitation"> | <img src="assets/icons/network.svg" width="20" alt=""> [**Red Vitalink · Doctor Asesor**](https://vitalink.lat/medicos) | The plan for surgeons and specialists, and the plan for GPs who accompany a patient's case from start to finish. |
-| <img src="assets/badges/status-feb-2027.svg" height="22" alt="From February 2027"> | <img src="assets/icons/package.svg" width="20" alt=""> [**Paquetes Vitalink · Vitalink for Hospitals**](https://vitalink.lat/productos/hospitales) | The whole surgery at a closed price in three DRG scenarios (no complication, complication, major complication), paid before admission and settled at discharge with the scenario that happened. |
+- <img src="assets/icons/record.svg" width="18" alt=""> [**Expediente Vitalink**](https://expediente.vitalink.lat/) &nbsp;<img src="assets/badges/status-live.svg" height="20" alt="Live"><br>
+  The doctor's whole practice in one record. An agent runs the schedule, confirms visits and follows up; a consult assistant drafts the note for the doctor to review and sign. The model never receives the patient's name or contact details, and the audio is deleted once transcribed.
+
+- <img src="assets/icons/credential.svg" width="18" alt=""> [**Vitalink credential**](https://expediente.vitalink.lat/credencializacion) &nbsp;<img src="assets/badges/status-live.svg" height="20" alt="Live"><br>
+  Verifies a doctor's professional licence, identity and documents, at no cost on any plan.
+
+- <img src="assets/icons/pay.svg" width="18" alt=""> [**Vitalink Pay**](https://pay.vitalink.chat/) &nbsp;<img src="assets/badges/status-live.svg" height="20" alt="Live"><br>
+  Credentialed doctors charge in cash, in monthly instalments or split across family members.
+
+- <img src="assets/icons/chat.svg" width="18" alt=""> [**Vitalink Chat**](https://www.vitalink.chat/) &nbsp;<img src="assets/badges/status-beta.svg" height="20" alt="Beta"><br>
+  Each person's own health agent.
+
+- <img src="assets/icons/network.svg" width="18" alt=""> [**Red Vitalink · Doctor Asesor**](https://vitalink.lat/medicos) &nbsp;<img src="assets/badges/status-invitation.svg" height="20" alt="By invitation"><br>
+  The plan for surgeons and specialists, and the plan for GPs who accompany a patient's case from start to finish.
+
+- <img src="assets/icons/package.svg" width="18" alt=""> [**Paquetes Vitalink · Vitalink for Hospitals**](https://vitalink.lat/productos/hospitales) &nbsp;<img src="assets/badges/status-feb-2027.svg" height="20" alt="From February 2027"><br>
+  The whole surgery at a closed price in three DRG scenarios (no complication, complication, major complication), paid before admission and settled at discharge with the scenario that happened.
 
 *The agent works; the doctor practises.* &nbsp; [**vitalink.lat →**](https://vitalink.lat)
 
