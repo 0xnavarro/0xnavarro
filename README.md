@@ -1,7 +1,7 @@
 <a href="https://www.0xnavarro.com/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-    <img alt="Carlos Navarro. Founder, builder, CEO. I build the companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
+    <img alt="Carlos Navarro. Founder, builder, CEO. I build companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
   </picture>
 </a>
 
