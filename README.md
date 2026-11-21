@@ -67,7 +67,7 @@ A side project I collaborate on in Switzerland, grown out of Casa-Facil, where I
 - **Ship dark.** New features go live behind a flag and are switched on with a runbook, a receipt and a way back.
 - **Publish the receipts.** Benchmarks ship their corpora, failures and limits, not just a headline number.
 
-The method keeps changing as the models get better. The April 2026 snapshot is in [Founder-Led Engineering Ops](https://www.0xnavarro.com/en/writing/founder-led-engineering-ops/).
+New projects start from [AI Software Bootstrap](https://github.com/0xnavarro/ai-software-bootstrap), my template for building software with AI agents while keeping control; Scanfix started from it. The method keeps changing as the models get better, and the essay [Founder-Led Engineering Ops](https://www.0xnavarro.com/en/writing/founder-led-engineering-ops/) is its April 2026 snapshot.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
@@ -83,6 +83,10 @@ Most of what I build lives in private company repositories. This is the public p
 - [**ReflexBench**](https://github.com/brida-ai/reflexbench) · `v1.0.0 stable`. An open benchmark and harness for typed decision models, with frozen corpora, calibration metrics, paired bootstrap intervals and a public failure ledger.
 - [**AlignmentBench**](https://github.com/brida-ai/alignmentbench) · `v0.1 preview`. Tests whether an AI system stays inside explicit authority, scope and oversight rules at the moment it chooses an action.
 
+**Templates**
+
+- [**AI Software Bootstrap**](https://github.com/0xnavarro/ai-software-bootstrap) · `template`. A starting point for a software project built with AI agents, without losing control: issues, specs, plans, worktrees, CI gates and review. Scanfix started from it.
+
 **Open-source contributions**
 
 - [**withastro/flue #69**](https://github.com/withastro/flue/pull/69) · `merged`. Added a reasoning-effort option for prompts, skills and tasks to the SDK of Flue, the sandbox agent framework from the Astro team.
@@ -90,7 +94,6 @@ Most of what I build lives in private company repositories. This is the public p
 **Earlier work**
 
 - [**ADSA**](https://github.com/AteneaLabs/adsa) · `2024`. Autonomous data-science agents: o1 writes the ML code, Claude 3.5 Sonnet debugs it, a coordinator runs the loop. Placed 71st of 2,461 active participants on Kaggle's Spaceship Titanic.
-- [**AI Software Bootstrap**](https://github.com/0xnavarro/ai-software-bootstrap) · `2026 snapshot`. The template behind the April 2026 method: issues, specs, plans, worktrees, CI gates and review.
 - [**create-qa-ops**](https://github.com/0xnavarro/qa-ops) · `archived`. An npm scaffolder for findings, audits, QA sessions and merge gates that agents can read and run.
 - [**Speech to Text**](https://github.com/0xnavarro/speech-to-text). Real-time, multilingual speech-to-text in the browser.
 - [**IA-PARA-TODOS**](https://github.com/0xnavarro/IA-PARA-TODOS) · `archived`. An open collection of AI apps and tutorials in Spanish.
