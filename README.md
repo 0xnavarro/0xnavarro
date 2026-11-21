@@ -16,6 +16,10 @@
 
 I've built technology since school: a first job in connected hardware while still a student, my first company in Madrid, CTO of a startup in Zurich, Head of IT Systems at a hospital in Mexico City, and Maria, a GPT-3 assistant on WhatsApp that reached 20,000+ users by word of mouth. Today I lead two companies, one in healthcare and one in how companies run, and I still design and build the technology myself. This page is the technical side; the rest is on [0xnavarro.com](https://www.0xnavarro.com/).
 
+## Why agents
+
+Agents are becoming the way work gets done, for people looking after their health and for the companies they work in. I'm building for both. Vitalink is building an agent that works for every person's health. Brida lets you build the company you want by talking, with agents that work on its own data. In both, agents do the work and people make the decisions.
+
 ## Building now
 
 ### <img src="assets/logos/vitalink-icon.svg" width="24" height="24" alt=""> Vitalink · the action layer for healthcare
@@ -34,25 +38,19 @@ I've built technology since school: a first job in connected hardware while stil
 - <img src="assets/icons/chat.svg" width="18" alt=""> [**Vitalink Chat**](https://www.vitalink.chat/) &nbsp;<img src="assets/badges/status-beta.svg" height="20" alt="Beta"><br>
   Each person's own health agent.
 
-- <img src="assets/icons/network.svg" width="18" alt=""> [**Red Vitalink · Doctor Asesor**](https://vitalink.lat/medicos) &nbsp;<img src="assets/badges/status-invitation.svg" height="20" alt="By invitation"><br>
+- <img src="assets/icons/network.svg" width="18" alt=""> **Red Vitalink · Doctor Asesor** &nbsp;<img src="assets/badges/status-invitation.svg" height="20" alt="By invitation"><br>
   The plan for surgeons and specialists, and the plan for GPs who accompany a patient's case from start to finish.
 
-- <img src="assets/icons/package.svg" width="18" alt=""> [**Paquetes Vitalink · Vitalink for Hospitals**](https://vitalink.lat/productos/hospitales) &nbsp;<img src="assets/badges/status-feb-2027.svg" height="20" alt="From February 2027"><br>
+- <img src="assets/icons/package.svg" width="18" alt=""> **Paquetes Vitalink · Vitalink for Hospitals** &nbsp;<img src="assets/badges/status-feb-2027.svg" height="20" alt="From February 2027"><br>
   The whole surgery at a closed price in three DRG scenarios (no complication, complication, major complication), paid before admission and settled at discharge with the scenario that happened.
 
 *The agent works; the doctor practises.* &nbsp; [**vitalink.lat →**](https://vitalink.lat)
 
 ### <img src="assets/logos/brida-tile.svg" width="24" height="24" alt=""> Brida · build your company by talking
 
-**Founder & CEO, since 2026.** Brida is the all-in-one infrastructure for a company that runs itself. You ask for what the company needs, whether portals, agents, processes, dashboards or websites, and Brida builds it on the company's own data and puts it to work. It runs from Brida or from Claude, ChatGPT, Cursor and any MCP client. Its first job is sales.
+**Founder & CEO, since 2026.** Brida is the all-in-one infrastructure for a company that runs itself: you build the company you want by talking. Say what it needs, whether portals, agents, processes, dashboards or a website, and Brida builds it on the company's own data and puts agents to work in it. Bring the company as it is: Brida connects to the systems you already use, or moves you off them. It works from Brida or from Claude, ChatGPT, Cursor and any MCP client, and its first agents work in sales.
 
 [**brida.ai →**](https://www.brida.ai/) &nbsp;·&nbsp; #12 of the top 100 AI startups in Estonia ([F6S](https://www.f6s.com/companies/artificial-intelligence/estonia/co), Nov 2026)
-
-### <img src="assets/logos/scanfix-icon.svg" width="24" height="24" alt=""> Scanfix · on the side
-
-A side project I collaborate on in Switzerland, grown out of Casa-Facil, where I was CTO. QR plates in every room and facility let anyone report an incident in seconds, without an app, and the report reaches the right team. It's a managed service for municipalities, hotels, schools and hospitals, hosted in Switzerland.
-
-[**scanfix.ch →**](https://scanfix.ch/en)
 
 ## How I build
 
@@ -67,12 +65,7 @@ A side project I collaborate on in Switzerland, grown out of Casa-Facil, where I
 - **Ship dark.** New features go live behind a flag and are switched on with a runbook, a receipt and a way back.
 - **Publish the receipts.** Benchmarks ship their corpora, failures and limits, not just a headline number.
 
-New projects start from [AI Software Bootstrap](https://github.com/0xnavarro/ai-software-bootstrap), my template for building software with AI agents while keeping control; Scanfix started from it. The method keeps changing as the models get better, and the essay [Founder-Led Engineering Ops](https://www.0xnavarro.com/en/writing/founder-led-engineering-ops/) is its April 2026 snapshot.
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
-  <img alt="What I build with: TypeScript, Python, Java, PostgreSQL, Next.js, Astro, Docker, Claude and MCP." src="assets/stack-light.svg" width="100%">
-</picture>
+New projects start from [AI Software Bootstrap](https://github.com/0xnavarro/ai-software-bootstrap), my template for building software with AI agents while keeping control; [Scanfix](https://scanfix.ch/en) started from it. The method keeps changing as the models get better, and the essay [Founder-Led Engineering Ops](https://www.0xnavarro.com/en/writing/founder-led-engineering-ops/) is its April 2026 snapshot.
 
 ## Open work
 
@@ -97,6 +90,10 @@ Most of what I build lives in private company repositories. This is the public p
 - [**create-qa-ops**](https://github.com/0xnavarro/qa-ops) · `archived`. An npm scaffolder for findings, audits, QA sessions and merge gates that agents can read and run.
 - [**Speech to Text**](https://github.com/0xnavarro/speech-to-text). Real-time, multilingual speech-to-text in the browser.
 - [**IA-PARA-TODOS**](https://github.com/0xnavarro/IA-PARA-TODOS) · `archived`. An open collection of AI apps and tutorials in Spanish.
+
+## On the side
+
+<img src="assets/logos/scanfix-icon.svg" width="18" alt=""> [**Scanfix**](https://scanfix.ch/en), a project I collaborate on in Switzerland. It grew out of Casa-Facil, where I was CTO. QR plates in every room let anyone report an incident without an app, and the report reaches the right team.
 
 ## Path
 

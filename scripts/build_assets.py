@@ -364,28 +364,6 @@ def product_icon(name):
     return svg(28, 28, name, name, "", body)
 
 
-STACK = [
-    ("typescript", "TypeScript"), ("python", "Python"), ("openjdk", "Java"),
-    ("postgresql", "PostgreSQL"), ("nextdotjs", "Next.js"), ("astro", "Astro"),
-    ("docker", "Docker"), ("claude", "Claude"), ("modelcontextprotocol", "MCP"),
-]
-
-
-def stack(theme):
-    t = THEMES[theme]
-    W, H = 1000, 170
-    body = [panel(W, H, t), text(56, 50, "WHAT I BUILD WITH", "mono", 13, t["muted"], spacing=2.6)]
-    n = len(STACK)
-    gap = (W - 112) / n
-    for i, (slug, label) in enumerate(STACK):
-        cx = 56 + gap * i + gap / 2
-        d = " ".join(re.findall(r' d="([^"]+)"', (ASSETS / "stack-icons" / f"{slug}.svg").read_text()))
-        body.append(f'<g transform="translate({cx - 17:g} 70) scale({34 / 24:g})"><path d="{d}" fill="{t["text2"]}"/></g>')
-        body.append(text(cx, 140, label, "sans", 15, t["muted"], anchor="middle", weight=400))
-    desc = "What I build with: " + ", ".join(label for _, label in STACK) + "."
-    return svg(W, H, "Stack", desc, font_css("sans-400", "mono"), "".join(body))
-
-
 def main():
     for label, icon, name in (("0xnavarro.com", "globe", "web"), ("Writing", "pen", "writing"),
                               ("LinkedIn", "linkedin", "linkedin"), ("Email", "mail", "email")):
@@ -394,8 +372,6 @@ def main():
         write(f"badges/status-{key}.svg", status_badge(key))
     for name in ("record", "credential", "pay", "chat", "network", "package"):
         write(f"icons/{name}.svg", product_icon(name))
-    for theme in THEMES:
-        write(f"stack-{theme}.svg", stack(theme))
     write("logos/brida-tile.svg", brida_tile())
     for theme in THEMES:
         for name, fn in (("hero", hero), ("method", method), ("path", path), ("signoff", signoff)):
