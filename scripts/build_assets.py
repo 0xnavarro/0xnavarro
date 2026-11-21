@@ -93,7 +93,7 @@ def hero(theme):
     W, H = 1000, 452
     name = "Carlos Navarro"
     line = "Building technology companies in complex markets."
-    sub = "I build the companies and write the software behind them."
+    sub = "I build the companies and the technology behind them."
     fits(name, "serif", 100, 640, -1)
     fits(line, "sans-500", 27, 760)
     fits(sub, "sans-400", 20, 640)
@@ -165,7 +165,7 @@ def hero(theme):
     return svg(
         W, H,
         "Carlos Navarro",
-        "Founder, builder, CEO. Building technology companies in complex markets. I build the companies and write the software behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
+        "Founder, builder, CEO. Building technology companies in complex markets. I build the companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
         css, "".join(body),
     )
 

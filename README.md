@@ -1,7 +1,7 @@
 <a href="https://www.0xnavarro.com/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-    <img alt="Carlos Navarro. Founder, builder, CEO. Building technology companies in complex markets. I build the companies and write the software behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
+    <img alt="Carlos Navarro. Founder, builder, CEO. Building technology companies in complex markets. I build the companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
   </picture>
 </a>
 
@@ -14,7 +14,7 @@
 
 <br>
 
-I've built technology since school: a first job in connected hardware while still a student, my first company in Madrid, CTO of a startup in Zurich, Head of IT Systems at a hospital in Mexico City, and Maria, a GPT-3 assistant on WhatsApp that reached 20,000+ users by word of mouth. Today I lead two companies in markets where complexity is the barrier, healthcare and the way companies run, and I still design the systems and write the code. This page is the technical side; the rest is on [0xnavarro.com](https://www.0xnavarro.com/).
+I've built technology since school: a first job in connected hardware while still a student, my first company in Madrid, CTO of a startup in Zurich, Head of IT Systems at a hospital in Mexico City, and Maria, a GPT-3 assistant on WhatsApp that reached 20,000+ users by word of mouth. Today I lead two companies in markets where complexity is the barrier, healthcare and the way companies run, and I still design and build the technology myself. This page is the technical side; the rest is on [0xnavarro.com](https://www.0xnavarro.com/).
 
 ## Building now
 
