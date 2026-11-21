@@ -1,7 +1,7 @@
 <a href="https://www.0xnavarro.com/">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-    <img alt="Carlos Navarro. Founder, builder, CEO. Shaping the agentic age by building companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg?v=agentic-age">
+    <img alt="Carlos Navarro. Founder, builder, CEO. Shaping the agentic age by building companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg?v=agentic-age" width="100%">
   </picture>
 </a>
 
@@ -55,8 +55,8 @@ Agents are becoming the way work gets done, for people looking after their healt
 ## How I build
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/method-dark.svg">
-  <img alt="How I build: Decide (written down first), Spec (specs and ADRs), Build (agents in parallel), Approve (a yes on the commit), Ship (dark, behind a flag)." src="assets/method-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/method-dark.svg?v=agentic-age">
+  <img alt="How I build: Decide (written down first), Spec (specs and ADRs), Build (agents in parallel), Approve (a yes on the commit), Ship (dark, behind a flag)." src="assets/method-light.svg?v=agentic-age" width="100%">
 </picture>
 
 - **Decisions in writing.** Every product, pricing or policy decision is written down before anyone builds it, with what it allows and what it doesn't.
@@ -98,8 +98,8 @@ Most of what I build lives in private company repositories. This is the public p
 ## Path
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/path-dark.svg">
-  <img alt="My path, newest first. 2026 to now: Brida, founder and CEO. 2025 to now: Vitalink, co-founder, CEO and CTO: Expediente with its agent, the Vitalink credential, Pay and the patient agent. 2024: ADSA, autonomous data-science agents on o1 and Claude 3.5 Sonnet, 71st of 2,461 on Kaggle. 2023: Head of IT Systems at Insigna Médica, hospital IT, BI and operations in Mexico City, where I saw the cash-pay problem. 2022: Maria, a GPT-3 assistant inside WhatsApp with 20,000+ users by word of mouth; founded Atenea Labs; CTO of Casa-Facil in Zurich, which grew into Scanfix. 2020: Rigfarm, my first company, built and sold crypto-mining rigs in Europe and closed when Ethereum left proof-of-work. 2016: first tech job at Vía Inteligente, footfall analytics with connected hardware. 2015: chess, professional player and coach, 2000 FIDE, Castilla-La Mancha under-18 champion and Andrés Iniesta award." src="assets/path-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/path-dark.svg?v=agentic-age">
+  <img alt="My path, newest first. 2026 to now: Brida, founder and CEO. 2025 to now: Vitalink, co-founder, CEO and CTO: Expediente with its agent, the Vitalink credential, Pay and the patient agent. 2024: ADSA, autonomous data-science agents on o1 and Claude 3.5 Sonnet, 71st of 2,461 on Kaggle. 2023: Head of IT Systems at Insigna Médica, hospital IT, BI and operations in Mexico City, where I saw the cash-pay problem. 2022: Maria, a GPT-3 assistant inside WhatsApp with 20,000+ users by word of mouth; founded Atenea Labs; CTO of Casa-Facil in Zurich, which grew into Scanfix. 2020: Rigfarm, my first company, built and sold crypto-mining rigs in Europe and closed when Ethereum left proof-of-work. 2016: first tech job at Vía Inteligente, footfall analytics with connected hardware. 2015: chess, professional player and coach, 2000 FIDE, Castilla-La Mancha under-18 champion and Andrés Iniesta award." src="assets/path-light.svg?v=agentic-age" width="100%">
 </picture>
 
 ## Writing
