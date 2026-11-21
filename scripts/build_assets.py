@@ -106,7 +106,7 @@ def hero(theme):
 
     # Ventures, as chips with each company's own mark.
     x, y, h = 56, 352, 46
-    for kind, label, role in (("vitalink", "Vitalink", "CEO & co-founder"), ("brida", "Brida", "CEO & founder")):
+    for kind, label, role in (("vitalink", "Vitalink", "Co-founder, CEO & CTO"), ("brida", "Brida", "Founder & CEO")):
         nw = measure(label, "sans-600", 19)
         rw = measure(role, "sans-400", 19)
         w = 14 + 24 + 11 + nw + 9 + rw + 20
@@ -165,7 +165,7 @@ def hero(theme):
     return svg(
         W, H,
         "Carlos Navarro",
-        "Founder, builder, CEO. Building technology companies in complex markets. I build the companies and write the software behind them. CEO and co-founder of Vitalink; CEO and founder of Brida.",
+        "Founder, builder, CEO. Building technology companies in complex markets. I build the companies and write the software behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
         css, "".join(body),
     )
 
@@ -212,21 +212,25 @@ def method(theme):
 
 
 PATH = [
-    # year, title, role, proof tags, current
+    # year, title, role, proof tags, current. Source: Carlos's LinkedIn profile and essays.
     ("2026", "Brida", "Founder & CEO · build your company by talking",
      ["Agents on company data", "MCP", "Open evaluation research"], True),
-    ("2025", "Vitalink", "Co-founder & CEO · the action layer for healthcare",
-     ["Health agent", "Expediente EHR", "Vitalink Pay"], True),
+    ("2025", "Vitalink", "Co-founder, CEO & CTO · the action layer for healthcare",
+     ["Expediente + agent", "Credential", "Pay", "Patient agent"], True),
     ("2024", "ADSA", "Autonomous data-science agents on o1 and Claude 3.5 Sonnet",
-     ["71st of 2,461 on Kaggle"], False),
-    ("2023", "Atenea Labs", "Founded my applied-AI lab",
-     ["Speech to Text", "Conversational AI"], False),
-    ("2022", "Head of IT Systems at a hospital", "Mexico · the start of four years in healthcare",
-     ["Hospital systems"], False),
-    ("", "Switzerland", "Moved there and started working in tech", [], False),
-    ("2021", "Rigfarm", "My first company, founded at 21 in Madrid",
-     ["Mining hardware", "Sales · logistics · inventory"], False),
-    ("2018", "Chess", "Regional under-18 champion, Castilla-La Mancha", [], False),
+     ["71st of 2,461 on Kaggle", "Whitepaper"], False),
+    ("2023", "Head of IT Systems, Insigna Médica", "Hospital IT, BI and operations in Mexico City, to mid-2026",
+     ["Where I saw the cash-pay problem"], False),
+    ("2022", "Maria", "A GPT-3 assistant inside WhatsApp, built over Christmas",
+     ["20,000+ users", "Word of mouth"], False),
+    ("", "Atenea Labs", "Founded my AI lab, today the holding behind my companies", [], False),
+    ("", "CTO, Casa-Facil.com", "Zurich, Switzerland", [], False),
+    ("2020", "Rigfarm", "First company: built and sold crypto-mining rigs in Europe",
+     ["Closed when Ethereum left proof-of-work"], False),
+    ("2016", "Vía Inteligente", "First tech job: footfall analytics with connected hardware",
+     ["Data systems", "Software architecture"], False),
+    ("2015", "Chess", "Professional player and coach, 2000 FIDE",
+     ["Castilla-La Mancha U18 champion", "Andrés Iniesta award"], False),
 ]
 
 
@@ -249,7 +253,7 @@ def path(theme):
     for _, _, _, tags, _ in PATH:
         ys.append(y)
         y += 138 if tags else 104
-    H = ys[-1] + 70
+    H = ys[-1] + (112 if PATH[-1][3] else 70)
     body = [panel(W, H, t)]
     body.append(
         f'<line x1="{line_x}" y1="{ys[0]}" x2="{line_x}" y2="{ys[-1]}" stroke="{t["border"]}" stroke-width="2"/>'

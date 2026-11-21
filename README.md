@@ -1,7 +1,7 @@
 <a href="https://www.0xnavarro.com/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-    <img alt="Carlos Navarro. Founder, builder, CEO. Building technology companies in complex markets. I build the companies and write the software behind them. CEO and co-founder of Vitalink; CEO and founder of Brida." src="assets/hero-light.svg" width="100%">
+    <img alt="Carlos Navarro. Founder, builder, CEO. Building technology companies in complex markets. I build the companies and write the software behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
   </picture>
 </a>
 
@@ -14,19 +14,24 @@
 
 <br>
 
-I founded my first company at 21, ran hospital IT in Mexico, and now lead two technology companies in markets where complexity is the barrier: healthcare, and the way companies run. I design the systems and write the code. This page is the technical side of that work; the rest is on [0xnavarro.com](https://www.0xnavarro.com/).
+I've built technology since school: a first job in connected hardware while still a student, my first company in Madrid, CTO of a startup in Zurich, Head of IT Systems at a hospital in Mexico City, and Maria, a GPT-3 assistant on WhatsApp that reached 20,000+ users by word of mouth. Today I lead two companies in markets where complexity is the barrier, healthcare and the way companies run, and I still design the systems and write the code. This page is the technical side; the rest is on [0xnavarro.com](https://www.0xnavarro.com/).
 
 ## Building now
 
 ### <img src="assets/logos/vitalink-icon.svg" width="24" height="24" alt=""> Vitalink · the action layer for healthcare
 
-**Co-founder & CEO, since 2025.** Vitalink gives every person an agent that works for their health, and gives doctors the tools that agent works with. We start in Mexico.
+**Co-founder, CEO & CTO, since 2025.** Healthcare isn't short of doctors; it's fragmented. Vitalink connects every person, and their own health agent, with doctors, hospitals and providers, on one identity, one verified credential and one record. The mission is to give every person an agent that works for their health. We start in Mexico, inside the doctor's office.
 
-| Product | What it does |
-|:--|:--|
-| [**Health agent**](https://www.vitalink.chat/) | Finds surgeons, requests and compares quotes at the full price, and books the assessment, over WhatsApp or the web. Free for patients. |
-| [**Expediente Vitalink**](https://expediente.vitalink.lat/) | Electronic health record for doctors and clinics: patients, visits, prescriptions, schedule and follow-up. Free to start. |
-| [**Vitalink Pay**](https://pay.vitalink.chat/) | A payment link for credentialed doctors. The patient pays in cash or in 3 to 24 monthly instalments; the doctor is paid the same either way. |
+| | Product | What it does |
+|:--|:--|:--|
+| Live | [**Expediente Vitalink**](https://expediente.vitalink.lat/) | The doctor's whole practice in one record. An agent runs the schedule, confirms visits and follows up; a consult assistant drafts the note for the doctor to review and sign. The model never receives the patient's name or contact details, and the audio is deleted once transcribed. |
+| Live | [**Vitalink credential**](https://expediente.vitalink.lat/credencializacion) | Verifies a doctor's professional licence, identity and documents, at no cost on any plan. |
+| Live | [**Vitalink Pay**](https://pay.vitalink.chat/) | Credentialed doctors charge in cash, in monthly instalments or split across family members. |
+| Beta | [**Vitalink Chat**](https://www.vitalink.chat/) | Each person's own health agent. |
+| By invitation | [**Red Vitalink · Doctor Asesor**](https://vitalink.lat/medicos) | The plan for surgeons and specialists, and the plan for GPs who accompany a patient's case from start to finish. |
+| From 2 Feb 2027 | [**Paquetes Vitalink · Vitalink for Hospitals**](https://vitalink.lat/productos/hospitales) | The whole surgery at a closed price in three DRG scenarios (no complication, complication, major complication), paid before admission and settled at discharge with the scenario that happened. |
+
+*The agent works; the doctor practises.* &nbsp; [**vitalink.lat →**](https://vitalink.lat)
 
 ### <img src="assets/logos/brida-tile.svg" width="24" height="24" alt=""> Brida · build your company by talking
 
@@ -72,7 +77,7 @@ Most of what I build lives in private company repositories. This is the public p
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/path-dark.svg">
-  <img alt="My path, newest first. 2026 to now: Brida, founder and CEO, build your company by talking. 2025 to now: Vitalink, co-founder and CEO, the action layer for healthcare: health agent, Expediente EHR, Vitalink Pay. 2024: ADSA, autonomous data-science agents on o1 and Claude 3.5 Sonnet, 71st of 2,461 on Kaggle. 2023: founded Atenea Labs, my applied-AI lab. 2022: Head of IT Systems at a hospital in Mexico, the start of four years in healthcare; before that, moved to Switzerland and started working in tech. 2021: founded Rigfarm, my first company, at 21 in Madrid. 2018: regional under-18 chess champion, Castilla-La Mancha." src="assets/path-light.svg" width="100%">
+  <img alt="My path, newest first. 2026 to now: Brida, founder and CEO. 2025 to now: Vitalink, co-founder, CEO and CTO: Expediente with its agent, the Vitalink credential, Pay and the patient agent. 2024: ADSA, autonomous data-science agents on o1 and Claude 3.5 Sonnet, 71st of 2,461 on Kaggle. 2023: Head of IT Systems at Insigna Médica, hospital IT, BI and operations in Mexico City, where I saw the cash-pay problem. 2022: Maria, a GPT-3 assistant inside WhatsApp with 20,000+ users by word of mouth; founded Atenea Labs; CTO of Casa-Facil.com in Zurich. 2020: Rigfarm, my first company, built and sold crypto-mining rigs in Europe and closed when Ethereum left proof-of-work. 2016: first tech job at Vía Inteligente, footfall analytics with connected hardware. 2015: chess, professional player and coach, 2000 FIDE, Castilla-La Mancha under-18 champion and Andrés Iniesta award." src="assets/path-light.svg" width="100%">
 </picture>
 
 ## Writing
