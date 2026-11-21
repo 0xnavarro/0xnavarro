@@ -1,7 +1,7 @@
 <a href="https://www.0xnavarro.com/">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-    <img alt="Carlos Navarro. Founder, builder, CEO. Shaping the world by building companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
+    <img alt="Carlos Navarro. Founder, builder, CEO. Shaping the agentic age by building companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida." src="assets/hero-light.svg" width="100%">
   </picture>
 </a>
 
@@ -18,7 +18,7 @@ I've built technology since school: a first job in connected hardware while stil
 
 ## Why agents
 
-Agents are becoming the way work gets done, for people looking after their health and for the companies they work in. I'm building for both. Vitalink is building an agent that works for every person's health. Brida lets you build the company you want by talking, with agents that work on its own data. In both, agents do the work and people make the decisions.
+Agents are becoming the way work gets done, for people looking after their health and for the companies they work in. I'm building for both. Vitalink is building an agent that works for every person's health. Brida lets you build the company you want by talking, with agents that work on its own data. In both, agents do the work and people make the decisions. More in [The Agentic Age](https://www.0xnavarro.com/en/writing/the-agentic-age-and-the-end-of-the-postindustrial-worker/).
 
 ## Building now
 
@@ -106,6 +106,7 @@ Most of what I build lives in private company repositories. This is the public p
 
 - [What a Startup CEO Does](https://www.0xnavarro.com/en/writing/what-a-startup-ceo-does/): making the company worth more, and why Vitalink starts small to go global.
 - [You Cannot Just Say an AI Is Aligned. You Have to Measure It.](https://www.0xnavarro.com/en/writing/you-cannot-just-say-an-ai-is-aligned-you-have-to-measure-it/): the thinking behind AlignmentBench.
+- [The Agentic Age and the End of the Post-Industrial Worker](https://www.0xnavarro.com/en/writing/the-agentic-age-and-the-end-of-the-postindustrial-worker/): thinking like builders of the world that has already begun, not employees of the one that's ending.
 - [The Miniaturization of the Firm](https://www.0xnavarro.com/en/writing/the-miniaturization-of-the-firm/): AI doesn't eliminate the company. It compresses it.
 - [Founder-Led Engineering Ops](https://www.0xnavarro.com/en/writing/founder-led-engineering-ops/): how I built with agents in April 2026; a snapshot, not today's method.
 

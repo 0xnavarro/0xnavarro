@@ -92,7 +92,7 @@ def hero(theme):
     t = THEMES[theme]
     W, H = 1000, 452
     name = "Carlos Navarro"
-    tagline = ("Shaping the world by building companies", "and the technology behind them.")
+    tagline = ("Shaping the agentic age by building companies", "and the technology behind them.")
     fits(name, "serif", 100, 640, -1)
     for part in tagline:
         fits(part, "sans-500", 31, 888)
@@ -164,7 +164,7 @@ def hero(theme):
     return svg(
         W, H,
         "Carlos Navarro",
-        "Founder, builder, CEO. Shaping the world by building companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
+        "Founder, builder, CEO. Shaping the agentic age by building companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
         css, "".join(body),
     )
 
