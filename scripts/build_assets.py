@@ -65,6 +65,15 @@ def brida_mark(x, y, size, fill):
     )
 
 
+def brida_tile_at(x, y, size):
+    """Brida's mark in white on a black tile, so it reads on both themes."""
+    inset = size * 0.16
+    return (
+        f'<rect x="{x:g}" y="{y:g}" width="{size}" height="{size}" rx="{size * 0.24:g}" fill="#0A0A0A"/>'
+        + brida_mark(x + inset, y + inset, size - 2 * inset, "#FFFFFF")
+    )
+
+
 def monogram(x, y, t, size=48):
     """The CN mark from the favicon on 0xnavarro.com."""
     return (
@@ -81,18 +90,22 @@ MOTION_OFF = "@media (prefers-reduced-motion: reduce){.flow,.pulse{animation:non
 
 def hero(theme):
     t = THEMES[theme]
-    W, H = 1000, 420
-    name, tagline = "Carlos Navarro", "I build companies and the software behind them."
+    W, H = 1000, 452
+    name = "Carlos Navarro"
+    line = "Building technology companies in complex markets."
+    sub = "I build the companies and write the software behind them."
     fits(name, "serif", 100, 640, -1)
-    fits(tagline, "sans-400", 27, 660)
+    fits(line, "sans-500", 27, 760)
+    fits(sub, "sans-400", 20, 640)
 
     body = [panel(W, H, t), monogram(56, 52, t)]
-    body.append(text(944, 82, "FOUNDER · ENGINEER", "mono", 13, t["muted"], anchor="end", spacing=2.6))
+    body.append(text(944, 82, "FOUNDER · BUILDER · CEO", "mono", 13, t["muted"], anchor="end", spacing=2.6))
     body.append(text(52, 232, name, "serif", 100, t["text"], spacing=-1))
-    body.append(text(56, 284, tagline, "sans", 27, t["text2"], weight=400))
+    body.append(text(56, 282, line, "sans", 27, t["text"], weight=500))
+    body.append(text(56, 318, sub, "sans", 20, t["muted"], weight=400))
 
     # Ventures, as chips with each company's own mark.
-    x, y, h = 56, 326, 46
+    x, y, h = 56, 352, 46
     for kind, label, role in (("vitalink", "Vitalink", "CEO & co-founder"), ("brida", "Brida", "CEO & founder")):
         nw = measure(label, "sans-600", 19)
         rw = measure(role, "sans-400", 19)
@@ -104,7 +117,7 @@ def hero(theme):
         if kind == "vitalink":
             body.append(vitalink_icon(x + 14, y + 11, 24, theme))
         else:
-            body.append(brida_mark(x + 13, y + 10, 26, t["text"]))
+            body.append(brida_tile_at(x + 14, y + 11, 24))
         body.append(text(x + 49, y + 29.5, label, "sans", 19, t["text"], weight=600))
         body.append(text(x + 49 + nw + 9, y + 29.5, role, "sans", 19, t["muted"], weight=400))
         x += w + 12
@@ -113,10 +126,10 @@ def hero(theme):
     gx, gy, step = 728, 112, 36
     dots = [
         f'<circle cx="{gx + c * step}" cy="{gy + r * step}" r="1.7" fill="{t["strong"]}"/>'
-        for r in range(5)
+        for r in range(4)
         for c in range(7)
     ]
-    route = [(0, 4), (2, 4), (2, 2), (4, 2), (4, 1), (6, 1), (6, 0)]
+    route = [(0, 3), (2, 3), (2, 2), (4, 2), (4, 1), (6, 1), (6, 0)]
     pts = " ".join(f"{gx + c * step},{gy + r * step}" for c, r in route)
     length = sum(
         abs(route[i + 1][0] - route[i][0]) * step + abs(route[i + 1][1] - route[i][1]) * step
@@ -137,12 +150,12 @@ def hero(theme):
             f'<circle cx="{gx + c * step}" cy="{gy + r * step}" r="3.6" fill="{t["bg"]}" '
             f'stroke="{t["accent"]}" stroke-width="1.6"/>'
         )
-    body.append(f'<circle cx="{gx}" cy="{gy + 4 * step}" r="5.5" fill="{t["bg"]}" stroke="{t["accent"]}" stroke-width="1.8"/>')
+    body.append(f'<circle cx="{gx}" cy="{gy + 3 * step}" r="5.5" fill="{t["bg"]}" stroke="{t["accent"]}" stroke-width="1.8"/>')
     body.append(f'<circle class="pulse" cx="{ex}" cy="{ey}" r="12" fill="{t["accent"]}" opacity="0.16"/>')
     body.append(f'<circle cx="{ex}" cy="{ey}" r="5.5" fill="{t["accent"]}"/>')
 
     css = (
-        font_css("serif", "sans-400", "sans-600", "mono")
+        font_css("serif", "sans-400", "sans-500", "sans-600", "mono")
         + f"@keyframes flow{{0%{{stroke-dashoffset:30}}72%,100%{{stroke-dashoffset:-{length}}}}}"
         + ".flow{animation:flow 5.2s cubic-bezier(.55,.1,.35,1) infinite}"
         + "@keyframes pulse{0%,66%{opacity:.16}78%{opacity:.5}100%{opacity:.16}}"
@@ -152,7 +165,7 @@ def hero(theme):
     return svg(
         W, H,
         "Carlos Navarro",
-        "Founder and engineer. I build companies and the software behind them. CEO and co-founder of Vitalink; CEO and founder of Brida.",
+        "Founder, builder, CEO. Building technology companies in complex markets. I build the companies and write the software behind them. CEO and co-founder of Vitalink; CEO and founder of Brida.",
         css, "".join(body),
     )
 
@@ -199,45 +212,74 @@ def method(theme):
 
 
 PATH = [
-    ("2026", "Vitalink", "Co-founder & CEO · an AI health agent, starting in Mexico", True),
-    ("", "Brida", "Founder & CEO · build your company by talking", True),
-    ("2025", "ADSA", "Multi-agent ML automation · 71st of 2,461 on Kaggle", False),
-    ("2023", "Atenea Labs", "Founded my applied-AI lab", False),
-    ("2022", "Healthcare, Mexico", "Hospital systems management", False),
-    ("2021", "First company", "Hardware e-commerce, founded at 21", False),
-    ("2018", "Chess", "Regional under-18 champion, Castilla-La Mancha", False),
+    # year, title, role, proof tags, current
+    ("2026", "Brida", "Founder & CEO · build your company by talking",
+     ["Agents on company data", "MCP", "Open evaluation research"], True),
+    ("2025", "Vitalink", "Co-founder & CEO · the action layer for healthcare",
+     ["Health agent", "Expediente EHR", "Vitalink Pay"], True),
+    ("2024", "ADSA", "Autonomous data-science agents on o1 and Claude 3.5 Sonnet",
+     ["71st of 2,461 on Kaggle"], False),
+    ("2023", "Atenea Labs", "Founded my applied-AI lab",
+     ["Speech to Text", "Conversational AI"], False),
+    ("2022", "Head of IT Systems at a hospital", "Mexico · the start of four years in healthcare",
+     ["Hospital systems"], False),
+    ("", "Switzerland", "Moved there and started working in tech", [], False),
+    ("2021", "Rigfarm", "My first company, founded at 21 in Madrid",
+     ["Mining hardware", "Sales · logistics · inventory"], False),
+    ("2018", "Chess", "Regional under-18 champion, Castilla-La Mancha", [], False),
 ]
+
+
+def pill(x, y, label, t):
+    label = label.upper()
+    w = measure(label, "mono", 12.5, 1.3) + 26
+    return w, (
+        f'<rect x="{x:g}" y="{y:g}" width="{w:.1f}" height="28" rx="14" fill="{t["surface"]}" '
+        f'stroke="{t["border"]}" stroke-width="1.1"/>'
+        + text(x + 13, y + 18.5, label, "mono", 12.5, t["text2"], spacing=1.3)
+    )
 
 
 def path(theme):
     t = THEMES[theme]
     W = 1000
-    top, pitch = 74, 100
-    H = top + pitch * (len(PATH) - 1) + 66
-    line_x, text_x = 204, 240
+    line_x, text_x, right = 204, 240, 944
+    top = 76
+    ys, y = [], top
+    for _, _, _, tags, _ in PATH:
+        ys.append(y)
+        y += 138 if tags else 104
+    H = ys[-1] + 70
     body = [panel(W, H, t)]
     body.append(
-        f'<line x1="{line_x}" y1="{top}" x2="{line_x}" y2="{top + pitch * (len(PATH) - 1)}" '
-        f'stroke="{t["border"]}" stroke-width="2"/>'
+        f'<line x1="{line_x}" y1="{ys[0]}" x2="{line_x}" y2="{ys[-1]}" stroke="{t["border"]}" stroke-width="2"/>'
     )
-    for i, (year, title, sub, now) in enumerate(PATH):
-        y = top + i * pitch
-        fits(title, "sans-600", 30, W - text_x - 56)
-        fits(sub, "sans-400", 22, W - text_x - 56)
+    for y, (year, title, role, tags, now) in zip(ys, PATH):
+        fits(title, "sans-600", 30, right - text_x)
+        fits(role, "sans-400", 22, right - text_x)
         if year:
             body.append(text(170, y + 15, year, "serif", 44, t["accent"], anchor="end"))
         if now:
+            body.append(text(170, y + 40, "TO NOW", "mono", 11.5, t["muted"], anchor="end", spacing=2))
             body.append(f'<circle cx="{line_x}" cy="{y}" r="15" fill="{t["accent"]}" opacity="0.16"/>')
         body.append(
             f'<circle cx="{line_x}" cy="{y}" r="8" fill="{t["accent"] if now else t["bg"]}" '
             f'stroke="{t["accent"]}" stroke-width="2"/>'
         )
         body.append(text(text_x, y + 10, title, "sans", 30, t["text"], weight=600))
-        body.append(text(text_x, y + 44, sub, "sans", 22, t["text2"], weight=400))
+        body.append(text(text_x, y + 44, role, "sans", 22, t["text2"], weight=400))
+        x = text_x
+        for tag in tags:
+            w, svg_pill = pill(x, y + 62, tag, t)
+            if x + w > right:
+                raise SystemExit(f"tags overflow on {title}")
+            body.append(svg_pill)
+            x += w + 10
     desc = "My path, newest first: " + "; ".join(
-        f"{year + ' — ' if year else ''}{title}: {sub}" for year, title, sub, _ in PATH
+        f"{year + ': ' if year else ''}{title}, {role}" + (f" ({', '.join(tags)})" if tags else "")
+        for year, title, role, tags, _ in PATH
     ) + "."
-    return svg(W, H, "Path", desc, font_css("serif", "sans-400", "sans-600"), "".join(body))
+    return svg(W, H, "Path", desc, font_css("serif", "sans-400", "sans-600", "mono"), "".join(body))
 
 
 def signoff(theme):
@@ -253,7 +295,7 @@ def signoff(theme):
 def brida_tile():
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="Brida">'
-        '<rect width="32" height="32" rx="8" fill="#C6F432"/>' + brida_mark(4, 4, 24, "#0B0B0B") + "</svg>\n"
+        + brida_tile_at(0, 0, 32) + "</svg>\n"
     )
 
 
