@@ -90,22 +90,19 @@ MOTION_OFF = "@media (prefers-reduced-motion: reduce){.flow,.pulse{animation:non
 
 def hero(theme):
     t = THEMES[theme]
-    W, H = 1000, 452
+    W, H = 1000, 420
     name = "Carlos Navarro"
-    line = "Building technology companies in complex markets."
-    sub = "I build the companies and the technology behind them."
+    line = "I build the companies and the technology behind them."
     fits(name, "serif", 100, 640, -1)
     fits(line, "sans-500", 27, 760)
-    fits(sub, "sans-400", 20, 640)
 
     body = [panel(W, H, t), monogram(56, 52, t)]
     body.append(text(944, 82, "FOUNDER · BUILDER · CEO", "mono", 13, t["muted"], anchor="end", spacing=2.6))
     body.append(text(52, 232, name, "serif", 100, t["text"], spacing=-1))
-    body.append(text(56, 282, line, "sans", 27, t["text"], weight=500))
-    body.append(text(56, 318, sub, "sans", 20, t["muted"], weight=400))
+    body.append(text(56, 284, line, "sans", 27, t["text2"], weight=500))
 
     # Ventures, as chips with each company's own mark.
-    x, y, h = 56, 352, 46
+    x, y, h = 56, 326, 46
     for kind, label, role in (("vitalink", "Vitalink", "Co-founder, CEO & CTO"), ("brida", "Brida", "Founder & CEO")):
         nw = measure(label, "sans-600", 19)
         rw = measure(role, "sans-400", 19)
@@ -165,17 +162,17 @@ def hero(theme):
     return svg(
         W, H,
         "Carlos Navarro",
-        "Founder, builder, CEO. Building technology companies in complex markets. I build the companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
+        "Founder, builder, CEO. I build the companies and the technology behind them. Co-founder, CEO and CTO of Vitalink; founder and CEO of Brida.",
         css, "".join(body),
     )
 
 
 METHOD = [
-    ("01", "Spec", "written requirement"),
-    ("02", "Plan", "reviewed before code"),
-    ("03", "Build", "agents in worktrees"),
-    ("04", "Gate", "tests · CI · review"),
-    ("05", "Ship", "deploy · observe"),
+    ("01", "Decide", "written down first"),
+    ("02", "Spec", "specs and ADRs"),
+    ("03", "Build", "agents in parallel"),
+    ("04", "Approve", "a yes on the commit"),
+    ("05", "Ship", "dark, behind a flag"),
 ]
 
 
@@ -224,7 +221,7 @@ PATH = [
     ("2022", "Maria", "A GPT-3 assistant inside WhatsApp, built over Christmas",
      ["20,000+ users", "Word of mouth"], False),
     ("", "Atenea Labs", "Founded my AI lab, today the holding behind my companies", [], False),
-    ("", "CTO, Casa-Facil.com", "Zurich, Switzerland", [], False),
+    ("", "CTO, Casa-Facil", "Zurich, Switzerland · it grew into Scanfix", ["Scanfix.ch"], False),
     ("2020", "Rigfarm", "First company: built and sold crypto-mining rigs in Europe",
      ["Closed when Ethereum left proof-of-work"], False),
     ("2016", "Vía Inteligente", "First tech job: footfall analytics with connected hardware",
@@ -303,7 +300,102 @@ def brida_tile():
     )
 
 
+INK, CREAM, BRONZE, LINE = "#0F1115", "#F5F1E8", "#A48B73", "#343B45"
+
+GLYPHS = {
+    # 20x20 line glyphs, drawn for this profile.
+    "globe": '<circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/>',
+    "pen": '<path d="M4 16l1-4 8-8 3 3-8 8-4 1z"/><path d="M11.5 5.5l3 3"/>',
+    "mail": '<rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="M3 5.5l7 5.5 7-5.5"/>',
+    "record": '<rect x="4" y="2.5" width="12" height="15" rx="2"/><path d="M7 7h6M7 10h6M7 13h4"/>',
+    "credential": '<path d="M10 2.5l6 2.5v4.5c0 3.8-2.6 6.6-6 8-3.4-1.4-6-4.2-6-8V5l6-2.5z"/><path d="M7.2 10l2 2 3.8-4"/>',
+    "pay": '<rect x="2.5" y="5" width="15" height="10" rx="2"/><path d="M2.5 8.5h15M5.5 12h3"/>',
+    "chat": '<path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v6.5a1.5 1.5 0 0 1-1.5 1.5H9l-4 3v-3H4a1.5 1.5 0 0 1-1.5-1.5V6A1.5 1.5 0 0 1 4 4.5z"/>',
+    "network": '<circle cx="10" cy="4.5" r="2"/><circle cx="4.5" cy="15" r="2"/><circle cx="15.5" cy="15" r="2"/><path d="M9 6.3l-3.6 6.9M11 6.3l3.6 6.9M6.5 15h7"/>',
+    "package": '<path d="M10 2.5l7 3.5v8l-7 3.5-7-3.5V6l7-3.5z"/><path d="M3 6l7 3.5L17 6M10 9.5v8"/>',
+}
+
+
+def glyph(name, x, y, size, color, width=1.6):
+    return (
+        f'<g transform="translate({x:g} {y:g}) scale({size / 20:g})" fill="none" stroke="{color}" '
+        f'stroke-width="{width * 20 / size:g}" stroke-linecap="round" stroke-linejoin="round">{GLYPHS[name]}</g>'
+    )
+
+
+def link_badge(label, icon):
+    """A link pill: ink with cream text, legible on GitHub's light and dark pages."""
+    h, size = 36, 15
+    tw = measure(label, "sans-500", size)
+    w = 16 + 18 + 9 + tw + 18
+    if icon == "linkedin":
+        mark = (f'<rect x="16" y="9" width="18" height="18" rx="4" fill="{BRONZE}"/>'
+                + text(25, 23, "in", "sans", 12.5, INK, anchor="middle", weight=600))
+    else:
+        mark = glyph(icon, 16, 8, 20, BRONZE, 1.7)
+    body = (f'<rect x="0.75" y="0.75" width="{w - 1.5:.1f}" height="{h - 1.5}" rx="{h / 2 - 0.75:g}" '
+            f'fill="{INK}" stroke="{LINE}" stroke-width="1.5"/>' + mark
+            + text(43, 23.5, label, "sans", size, CREAM, weight=500))
+    return svg(round(w, 1), h, label, label, font_css("sans-500", "sans-600"), body)
+
+
+STATUS = {
+    "live": ("LIVE", "#22C55E"),
+    "beta": ("BETA", "#F5B544"),
+    "invitation": ("BY INVITATION", BRONZE),
+    "feb-2027": ("FEB 2027", "#8F897F"),
+}
+
+
+def status_badge(key):
+    label, dot = STATUS[key]
+    h = 24
+    tw = measure(label, "mono", 11.5, 1.4)
+    w = 12 + 8 + 8 + tw + 12
+    body = (f'<rect x="0.5" y="0.5" width="{w - 1:.1f}" height="{h - 1}" rx="{h / 2 - 0.5:g}" fill="{INK}" '
+            f'stroke="{LINE}"/><circle cx="16" cy="12" r="4" fill="{dot}"/>'
+            + text(28, 16.2, label, "mono", 11.5, CREAM, spacing=1.4))
+    return svg(round(w, 1), h, label, label, font_css("mono"), body)
+
+
+def product_icon(name):
+    """A small tile so the icon reads on both themes."""
+    body = f'<rect width="28" height="28" rx="7" fill="{INK}"/>' + glyph(name, 5, 5, 18, BRONZE, 1.6)
+    return svg(28, 28, name, name, "", body)
+
+
+STACK = [
+    ("typescript", "TypeScript"), ("python", "Python"), ("openjdk", "Java"),
+    ("postgresql", "PostgreSQL"), ("nextdotjs", "Next.js"), ("astro", "Astro"),
+    ("docker", "Docker"), ("claude", "Claude"), ("modelcontextprotocol", "MCP"),
+]
+
+
+def stack(theme):
+    t = THEMES[theme]
+    W, H = 1000, 170
+    body = [panel(W, H, t), text(56, 50, "WHAT I BUILD WITH", "mono", 13, t["muted"], spacing=2.6)]
+    n = len(STACK)
+    gap = (W - 112) / n
+    for i, (slug, label) in enumerate(STACK):
+        cx = 56 + gap * i + gap / 2
+        d = " ".join(re.findall(r' d="([^"]+)"', (ASSETS / "stack-icons" / f"{slug}.svg").read_text()))
+        body.append(f'<g transform="translate({cx - 17:g} 70) scale({34 / 24:g})"><path d="{d}" fill="{t["text2"]}"/></g>')
+        body.append(text(cx, 140, label, "sans", 15, t["muted"], anchor="middle", weight=400))
+    desc = "What I build with: " + ", ".join(label for _, label in STACK) + "."
+    return svg(W, H, "Stack", desc, font_css("sans-400", "mono"), "".join(body))
+
+
 def main():
+    for label, icon, name in (("0xnavarro.com", "globe", "web"), ("Writing", "pen", "writing"),
+                              ("LinkedIn", "linkedin", "linkedin"), ("Email", "mail", "email")):
+        write(f"badges/link-{name}.svg", link_badge(label, icon))
+    for key in STATUS:
+        write(f"badges/status-{key}.svg", status_badge(key))
+    for name in ("record", "credential", "pay", "chat", "network", "package"):
+        write(f"icons/{name}.svg", product_icon(name))
+    for theme in THEMES:
+        write(f"stack-{theme}.svg", stack(theme))
     write("logos/brida-tile.svg", brida_tile())
     for theme in THEMES:
         for name, fn in (("hero", hero), ("method", method), ("path", path), ("signoff", signoff)):
