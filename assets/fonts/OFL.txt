@@ -1,0 +1,10 @@
+The fonts in this folder are subsets of:
+
+- Instrument Serif, Copyright 2022 The Instrument Serif Project Authors (https://github.com/Instrument/instrument-serif)
+- Inter, Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)
+- JetBrains Mono, Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+
+Each is licensed under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org/open-font-license-official-text/
+
+They are embedded in the SVG images of this profile so the type matches 0xnavarro.com.
