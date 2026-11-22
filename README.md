@@ -22,7 +22,7 @@ Agents are becoming the way work gets done, for people looking after their healt
 
 ## Building now
 
-### <img src="assets/logos/vitalink-icon.svg" width="24" height="24" alt=""> Vitalink · the action layer for healthcare
+### <img src="assets/logos/vitalink-icon.svg" width="24" height="24" alt=""> [Vitalink](https://vitalink.lat) · the action layer for healthcare
 
 **Co-founder, CEO & CTO, since 2025.** Healthcare isn't short of doctors; it's fragmented. Vitalink connects every person, and their own health agent, with doctors, hospitals and providers, on one identity, one verified credential and one record. The mission is to give every person an agent that works for their health. We start in Mexico, inside the doctor's office.
 
@@ -38,10 +38,10 @@ Agents are becoming the way work gets done, for people looking after their healt
 - <img src="assets/icons/chat.svg" width="18" alt=""> [**Vitalink Chat**](https://www.vitalink.chat/) &nbsp;<img src="assets/badges/status-beta.svg" height="20" alt="Beta"><br>
   Each person's own health agent.
 
-- <img src="assets/icons/network.svg" width="18" alt=""> **Red Vitalink · Doctor Asesor** &nbsp;<img src="assets/badges/status-invitation.svg" height="20" alt="By invitation"><br>
+- <img src="assets/icons/network.svg" width="18" alt=""> [**Red Vitalink · Doctor Asesor**](https://vitalink.lat/medicos) &nbsp;<img src="assets/badges/status-invitation.svg" height="20" alt="By invitation"><br>
   The plan for surgeons and specialists, and the plan for GPs who accompany a patient's case from start to finish.
 
-- <img src="assets/icons/package.svg" width="18" alt=""> **Paquetes Vitalink · Vitalink for Hospitals** &nbsp;<img src="assets/badges/status-feb-2027.svg" height="20" alt="From February 2027"><br>
+- <img src="assets/icons/package.svg" width="18" alt=""> [**Paquetes Vitalink · Vitalink for Hospitals**](https://vitalink.lat/productos/hospitales) &nbsp;<img src="assets/badges/status-feb-2027.svg" height="20" alt="From February 2027"><br>
   The whole surgery at a closed price in three DRG scenarios (no complication, complication, major complication), paid before admission and settled at discharge with the scenario that happened.
 
 *The agent works; the doctor practises.* &nbsp; [**vitalink.lat →**](https://vitalink.lat)
